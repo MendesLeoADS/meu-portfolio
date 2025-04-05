@@ -1,21 +1,21 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Database, Globe, Server, Layers, LayoutGrid, Cloud, GitBranch } from "lucide-react"
+import { Cloud, Database, GitBranch, Globe, Layers, LayoutGrid, Server } from "lucide-react"
 
-// Modificar as listas de habilidades conforme solicitado
+
 const frontendSkills = ["HTML", "CSS", "JavaScript", "React", "JSX", "Axios", "Git"]
 
 const backendSkills = ["Node.js", "Express.js", "RESTful APIs", "JSON/XML", "Git", "Webhooks", "Middlewares"]
 
-const databaseSkills = ["MySQL", "MongoDB", "Supabase", "Google Planilhas", "Excel"]
+const databaseSkills = ["MySQL", "MongoDB", "Supabase", "PostgreSQL", "Google Planilhas", "Excel"]
 
 const toolsSkills = [
   "GitHub",
   "App Sheet",
   "Power Automate",
+  "Power BI",
   "Clasp",
-  "VS Code",
   "Postman",
   "Office Scripts",
   "Apps Script",
@@ -49,7 +49,7 @@ export default function Skills() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Combinação de tecnologias que utilizo para criar soluções impactantes
+            Combinação de stacks (tecnologias) que utilizo para criar soluções reais
           </p>
         </div>
 
@@ -161,7 +161,7 @@ export default function Skills() {
             </div>
             <h3 className="text-xl font-bold mb-3">Cloud & Deployment</h3>
             <p className="text-muted-foreground">
-              Experiência com implantação de aplicações em Google Cloud Platform (GCP), garantindo escalabilidade e
+              Habilidade com implantação de aplicações em Google Cloud Platform (GCP), Supabase, Atlas MongoDB, garantindo escalabilidade e
               disponibilidade.
             </p>
           </div>

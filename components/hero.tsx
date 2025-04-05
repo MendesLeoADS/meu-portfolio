@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { useEffect, useState } from "react"
 
 export default function Hero() {
   const [typedText, setTypedText] = useState("")
-  const textToType = "Seja Bem Vindo(a) ao meu Portfolio..."
+  const textToType = "Seja Bem Vindo(a) ao meu Portfólio..."
   const [textIndex, setTextIndex] = useState(0)
 
   useEffect(() => {
@@ -81,7 +80,7 @@ export default function Hero() {
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/50 mx-auto glow-effect">
               {/* Placeholder para imagem de perfil */}
               <img
-                src="/placeholder.svg?height=400&width=400"
+                src="/images/eu.jpg"
                 alt="Leonardo Mendes"
                 className="w-full h-full object-cover"
               />

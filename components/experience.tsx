@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { motion } from "framer-motion"
-import { Code, HelpCircle, ListChecks, LineChart, Terminal } from "lucide-react"
+import { Code, HelpCircle, LineChart, ListChecks, Terminal } from "lucide-react"
 
 interface ExperienceProps {
   year: string
@@ -12,7 +12,7 @@ interface ExperienceProps {
   description: string[]
   technologies: string[]
   icon: React.ReactNode
-  logo: string // Adicionando campo para a logo da empresa
+  logo: string
 }
 
 const experiences: ExperienceProps[] = [
@@ -23,26 +23,27 @@ const experiences: ExperienceProps[] = [
     description: [
       "Desenvolvimento de funcionalidades em Node.js junto ao Apps Script e consumo de APIs JSON e XML para manipulação de dados seguindo os conceitos de ETL.",
       "Integração de sistemas ERP's e criação de Middlewares e Webhooks para melhor gestão e apoio a tomada de decisão.",
-      "Criação de aplicativos e automação de fluxos de trabalho utilizando App Sheet e Google Planilhas.",
+      "Criação de aplicativos e automação de fluxos de trabalho utilizando App Sheet e Google Planilhas, otimizando processos e entregando soluções eficientes. Proficiente em Google Workspace.",
       "Aplicação de metodologias ágeis como Kanban junto ao Trello para gerenciamento de projetos.",
+      "Uso de Git/GitHub para controle de versão e colaboração em projetos, além de ferramentas como Postman, Swagger e Thunder Client para testes de API.",
     ],
     technologies: ["Node.js", "Apps Script", "APIs REST", "App Sheet", "Google Workspace", "Git/GitHub"],
     icon: <Code className="h-6 w-6 text-primary" />,
-    logo: "", // Placeholder para a logo da PortoReal
+    logo: "images/portoreal.jpg",
   },
   {
     year: "12/2021 - 02/2024",
     title: "Assistente Fiscal",
     company: "LATICÍNIOS TIROLEZ",
     description: [
-      "Suporte e HelpDesk para sistemas fiscais e ERPs (TOTVS Logix/TAF/B.I).",
-      "Atuação como Key User em sistemas de gestão fiscal e automação.",
-      "Desenvolvimento e manutenção de dashboards para indicadores fiscais.",
-      "Automação de rotinas fiscais, otimizando processos de escrituração.",
+      "Suporte e HelpDesk a usuários de sistemas fiscais e ERPs (TOTVS Logix, TAF, BI), auxiliando na resolução de chamados e na automação de processos.",
+      "Atuação como Key User em sistemas de gestão fiscal e automação, realizando parametrizações, testes, análise de performance e suporte a usuários.",
+      "Desenvolvimento e manutenção de dashboards para indicadores fiscais, utilizando ferramentas de BI e análise de dados para monitoramento de riscos.",
+      "Automação de rotinas fiscais, otimizando processos de escrituração, digitalização e conferência (análise) de documentos.",
     ],
     technologies: ["TOTVS Logix/TAF/BI", "ANF-e", "Automação de Processos", "QlikSense"],
     icon: <HelpCircle className="h-6 w-6 text-primary" />,
-    logo: "", // Placeholder para a logo da Tirolez
+    logo: "images/tirolez.jpg",
   },
   {
     year: "09/2020 - 12/2021",
@@ -56,20 +57,20 @@ const experiences: ExperienceProps[] = [
     ],
     technologies: ["TOTVS Logix/TAF/BI", "ANF-e", "Automação de Processos", "QlikSense"],
     icon: <Terminal className="h-6 w-6 text-primary" />,
-    logo: "", // Placeholder para a logo da Tirolez
+    logo: "images/tirolez.jpg",
   },
   {
     year: "12/2019 - 09/2020",
     title: "Aprendiz Fiscal",
     company: "LATICÍNIOS TIROLEZ",
     description: [
-      "Suporte na administração de documentos fiscais e devoluções de mercadorias.",
-      "Auxílio na escrituração de notas fiscais e conferência automatizada de documentos.",
+      "Suporte na administração de documentos fiscais e devoluções de mercadorias, analisando dados e movimentações dentro do ERP.",
+      "Auxílio na escrituração de notas fiscais e conferência automatizada de documentos, garantindo integridade dos registros.",
       "Experiência com ferramentas de gestão empresarial e automação de processos fiscais.",
     ],
     technologies: ["TOTVS Logix/TAF", "ANF-e", "Automação de Documentos"],
     icon: <LineChart className="h-6 w-6 text-primary" />,
-    logo: "", // Placeholder para a logo da Tirolez
+    logo: "images/tirolez.jpg",
   },
 ]
 
@@ -79,11 +80,11 @@ export default function Experience() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Minha <span className="gradient-text">Experiência</span>
+            Minhas <span className="gradient-text">Experiências</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Minha jornada profissional e transição para a área de tecnologia
+            Minha jornada profissional e transição para a área da Tecnologia da Informação
           </p>
         </div>
 

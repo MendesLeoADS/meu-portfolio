@@ -1,9 +1,9 @@
 "use client"
 
-import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import { Code, TrendingUp, LineChart, Download } from "lucide-react"
+import { Code, Download, LineChart, TrendingUp } from "lucide-react"
 
 export default function About() {
   return (
@@ -15,14 +15,14 @@ export default function About() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Minha jornada da área contábil para o desenvolvimento de software
+            Minha jornada da área Fiscal para o Desenvolvimento de Software
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-in show">
             <p className="text-lg">
-              Sou um <span className="text-primary font-semibold">Desenvolvedor de Software</span> com experiência em
+              Sou um <span className="text-primary font-semibold">Desenvolvedor</span> com experiência em
               Code e No/Low-code, criação e consumo de APIs RESTful, e integração com diversos bancos de dados.
             </p>
 
@@ -34,10 +34,9 @@ export default function About() {
             </p>
 
             <p>
-              Atualmente, trabalho com desenvolvimento em <span className="font-semibold">Node.js</span>,{" "}
-              <span className="font-semibold">Express.js</span>, e frontend com
-              <span className="font-semibold"> HTML</span>, <span className="font-semibold">CSS</span> e{" "}
-              <span className="font-semibold">JavaScript</span>, priorizando acessibilidade e experiência do usuário.
+              Atualmente, trabalho com uma ampla stack do JavaScript, seja no <span className="font-semibold">frontend</span>,{" "}
+              ou no backend. 
+              <span className="font-semibold"> Sempre</span>, priorizando performance, acessibilidade e experiência do usuário.
             </p>
 
             <p>
@@ -69,7 +68,7 @@ export default function About() {
                     <h3 className="text-xl font-bold mb-2">Visão Técnica + Negócios</h3>
                     <p className="text-muted-foreground">
                       Combino conhecimento técnico com entendimento de processos de negócio graças à minha experiência
-                      anterior na área contábil/fiscal.
+                      anterior na área contábil/fiscal e formação em Administração.
                     </p>
                   </div>
                 </div>
@@ -84,7 +83,7 @@ export default function About() {
                   </div>
                   <h3 className="text-lg font-semibold">Análise de Dados</h3>
                   <p className="text-sm text-muted-foreground">
-                    Experiência com análise e visualização de dados para tomada de decisões
+                    Experiência com análise e visualização de dados para tomada de decisões, priorizando boas práticas de ETL.
                   </p>
                 </div>
               </Card>
@@ -98,7 +97,7 @@ export default function About() {
                   </div>
                   <h3 className="text-lg font-semibold">Automação</h3>
                   <p className="text-sm text-muted-foreground">
-                    Tenho habilidades em automação de processos com low-code e desenvolvimento personalizado
+                    Tenho habilidades em automação de processos com Planilhas, ferramentas No/Low-code e desenvolvimento personalizado.
                   </p>
                 </div>
               </Card>

@@ -1,16 +1,19 @@
-import type React from "react"
+import { ThemeProvider } from "@/components/theme-provider"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import type React from "react"
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Leonardo Mendes | Desenvolvedor Full Stack",
+  title: "Leonardo Mendes | Portfólio",
   description:
     "Portfólio de Leonardo Mendes, desenvolvedor full stack com experiência em desenvolvimento web, criação de APIs e automação de processos.",
   generator: "v0.dev",
+  icons: {
+    icon: "/images/leomendes.png",
+  }
 }
 
 export default function RootLayout({
