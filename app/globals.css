@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 91% 5%;
+    --foreground: 0 0% 98%;
+    --card: 217 91% 5%;
+    --card-foreground: 0 0% 98%;
+    --popover: 217 91% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 217 91.2% 59.8%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 217 30% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 217 30% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 30% 15%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 30% 15%;
+    --input: 217 30% 15%;
+    --ring: 217 91.2% 59.8%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Garantir que todas as seções sejam visíveis */
+  section {
+    position: relative;
+    z-index: 1;
+    min-height: 100px; /* Altura mínima para garantir visibilidade */
+    width: 100%;
+    overflow: visible;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1;
+}
+
+/* Melhorar a animação para garantir que funcione corretamente */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tech-card {
+  @apply p-4 rounded-xl bg-secondary flex flex-col items-center justify-center gap-2 hover-lift hover:shadow-lg hover:shadow-primary/20 transition-all;
+}
+
+/* Glass effect for the navbar */
+.glass-effect {
+  @apply bg-blue-950/50 backdrop-blur-md;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+/* Efeito de brilho para cards e elementos */
+.glow-effect {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+}
+
+/* Efeito de gradiente animado */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #0f172a, #172554, #1e3a8a, #1e40af);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Efeito de brilho para texto */
+.text-glow {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+}
+
+/* Animação para ícones de código */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Variações na animação para diferentes ícones */
+@keyframes float-alt {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(20px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Gradientes personalizados */
+.bg-gradient-radial {
+  background: radial-gradient(
+    circle,
+    var(--tw-gradient-from) 0%,
+    var(--tw-gradient-via) 50%,
+    var(--tw-gradient-to) 100%
+  );
+}
+
+.bg-gradient-conic {
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    var(--tw-gradient-from) 0%,
+    var(--tw-gradient-via) 50%,
+    var(--tw-gradient-to) 100%
+  );
+}
+
+.bg-gradient-mesh {
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
