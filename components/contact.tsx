@@ -2,13 +2,13 @@
 
 import type React from "react"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, MessageSquare } from "lucide-react"
 import { motion } from "framer-motion"
+import { Github, Instagram, Linkedin, Mail, MapPin, MessageSquare, Phone, Send } from "lucide-react"
+import { useState } from "react"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -23,23 +23,40 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Aqui você pode adicionar a lógica para enviar o formulário
-    // Por exemplo, usando fetch ou uma biblioteca como axios
-    console.log("Form data submitted:", formData)
-
-    // Reset form (em um caso real você faria isso após o envio bem-sucedido)
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-
-    // Exibir uma mensagem de sucesso
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.")
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxt4GYSP9XY9Q38OXFuqGcPjuxXifKCt3AOPpfTkllOEAmD5RCDkTQOquUAoq8tyHY4/exec';
+  
+    try {
+      const formDataObj = new FormData();
+      // Mapear os nomes do estado para os nomes esperados pelo Google Sheets.
+      formDataObj.append('NomeCompleto', formData.name);
+      formDataObj.append('Email', formData.email);
+      formDataObj.append('Assunto', formData.subject);
+      formDataObj.append('Mensagem', formData.message);
+  
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formDataObj,
+      });
+  
+      console.log('Form data submitted:', formData);
+  
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: '',
+      });
+  
+      alert('Mensagem enviada com sucesso! Entro em contato em breve.');
+    } catch (error) {
+      console.error('Erro ao enviar o formulário:', error);
+      alert('Ocorreu um erro ao enviar a mensagem. Tente novamente.');
+    }
+  };
 
   const contactInfo = [
     {
@@ -165,68 +182,70 @@ export default function Contact() {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-6">Envie uma mensagem</h3>
+
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium mb-2">
-                        Nome completo
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        placeholder="Seu nome"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium mb-2">
-                        Email
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="seu.email@exemplo.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                      Assunto
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      placeholder="Sobre o que você quer conversar?"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Mensagem
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      placeholder="Escreva sua mensagem aqui..."
-                      rows={5}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <Button type="submit" className="w-full gap-2">
-                    <Send className="h-4 w-4" />
-                    Enviar Mensagem
-                  </Button>
-                </form>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div>
+      <label htmlFor="name" className="block text-sm font-medium mb-2">
+        Nome completo
+      </label>
+      <Input
+        id="name"
+        name="name"
+        placeholder="Seu nome"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+    </div>
+    <div>
+      <label htmlFor="email" className="block text-sm font-medium mb-2">
+        Email
+      </label>
+      <Input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="seu.email@exemplo.com"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+    </div>
+  </div>
+  <div>
+    <label htmlFor="subject" className="block text-sm font-medium mb-2">
+      Assunto
+    </label>
+    <Input
+      id="subject"
+      name="subject"
+      placeholder="Sobre o que você quer conversar?"
+      value={formData.subject}
+      onChange={handleChange}
+      required
+    />
+  </div>
+  <div>
+    <label htmlFor="message" className="block text-sm font-medium mb-2">
+      Mensagem
+    </label>
+    <Textarea
+      id="message"
+      name="message"
+      placeholder="Escreva sua mensagem aqui..."
+      rows={5}
+      value={formData.message}
+      onChange={handleChange}
+      required
+    />
+  </div>
+  <Button type="submit" className="w-full gap-2">
+    <Send className="h-4 w-4" />
+    Enviar Mensagem
+  </Button>
+</form>
+
               </CardContent>
             </Card>
           </motion.div>
