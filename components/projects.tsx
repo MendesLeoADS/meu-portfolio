@@ -1,12 +1,12 @@
 "use client"
 
-import { useState } from "react"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Github, ExternalLink, FolderGit2 } from "lucide-react"
-import { motion } from "framer-motion"
+import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { motion } from "framer-motion"
+import { ExternalLink, FolderGit2, Github } from "lucide-react"
+import { useState } from "react"
 
 // Este componente permitirá que o Leonardo adicione seus projetos depois
 const projectCategories = ["Todos", "Web", "Apps", "Automação"]
@@ -15,13 +15,13 @@ const projectCategories = ["Todos", "Web", "Apps", "Automação"]
 const projectsData = [
   {
     id: 1,
-    title: "Sistema de Gestão de Estoque",
-    description: "Aplicação web para gerenciamento de estoque com dashboard, relatórios e sistema de alertas.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["Node.js", "Express", "MongoDB", "React"],
-    github: "https://github.com/MendesLeoADS/projeto1",
-    live: "#",
-    category: "Web",
+    title: "Maquininha de Pagamentos",
+    description: "Aplicação que simula uma maquininha de cartão para pagamentos em Débito, Crédito ou até QRCode.",
+    image: "imgProjects/appMaquinaCartao.png",
+    technologies: ["Java", "Maven", "Scanner", "UUID"],
+    github: "https://github.com/MendesLeoADS/maquininhaDeCartao",
+    live: "https://drive.google.com/file/d/199y2vmhkYo7WMaln69AZxrprFyciv8Vu/view?usp=sharing",
+    category: "Apps",
   },
   {
     id: 2,
