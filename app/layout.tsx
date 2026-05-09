@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Leonardo Mendes | Portfólio",
   description:
     "Portfólio de Leonardo Mendes, desenvolvedor full stack com experiência em desenvolvimento web, criação de APIs e automação de processos.",
-  generator: "v0.dev",
+  generator: "léo",
   icons: {
     icon: "/images/leomendes.png",
   }

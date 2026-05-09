@@ -68,8 +68,8 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      details: "contato.leonardomendesgomes@gmail.com",
-      link: "mailto:contato.leonardomendesgomes@gmail.com",
+      details: "devleonardo.tech@gmail.com",
+      link: "mailto:devleonardo.tech@gmail.com",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
@@ -92,12 +92,12 @@ export default function Contact() {
       link: "https://www.linkedin.com/in/leonardo-mendes-942927192/",
       color: "hover:text-blue-400",
     },
-    {
-      icon: <Instagram className="h-6 w-6" />,
-      name: "Instagram",
-      link: "https://www.instagram.com/mleonardoo_/",
-      color: "hover:text-pink-500",
-    },
+    // {
+    //   icon: <Instagram className="h-6 w-6" />,
+    //   name: "Instagram",
+    //   link: "https://www.instagram.com/mleonardoo_/",
+    //   color: "hover:text-pink-500",
+    // },
     {
       icon: <MessageSquare className="h-6 w-6" />,
       name: "WhatsApp",

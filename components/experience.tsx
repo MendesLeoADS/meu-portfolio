@@ -16,8 +16,52 @@ interface ExperienceProps {
 }
 
 const experiences: ExperienceProps[] = [
+        {
+    year: "01/2026 - até o momento",
+    title: "Data Analyst",
+    company: "GRUPO CAOA",
+  description: [
+    "Apoio estratégico às áreas de FP&A por meio de inteligência de dados, transformando grandes volumes de informação em insights acionáveis para o planejamento financeiro.",
+    "Desenvolvimento de dashboards executivos em Power BI, criando visões de alto impacto para suporte direto à tomada de decisão da diretoria e CFO.",
+    "Engenharia de Dados e estruturação de fluxos ETL complexos, realizando a integração e manipulação de bases oriundas de sistemas como SAP, IBM Cognos e Protheus.",
+    "Garantia da integridade e assertividade dos dados financeiros através de processos rigorosos de validação e tratamento de dados em ambientes multinacionais.",
+    "Implementação de soluções de RPA e automação de processos com Python e VBA, visando a otimização de rotinas críticas e a eliminação de tarefas manuais complexas.",
+  ],
+  technologies: ["Python", "SQL (Oracle DB)", "Power BI", "SAP", "IBM Cognos", "TOTVS Protheus", "Excel Avançado", "VBA", "Power Automate", "ETL / Engenharia de Dados"
+],
+    icon: <Code className="h-6 w-6 text-primary" />,
+    logo: "images/caoa_logo.png",
+  },
+      {
+    year: "05/2025 - 12/2025",
+    title: "Planejamento e Performance de Dados (Estagiário)",
+    company: "GRUPO PETZ",
+    description: [
+      "Automação de rotinas complexas com Python (Pandas, Selenium, PyAutoGUI), VBA e Office Scripts, eliminando gargalos e reduzindo drasticamente o esforço manual em processos críticos de negócio.",
+      "Manutenção e otimização do Data Mart de FP&A, aplicando modelagem multidimensional avançada diretamente no Data Warehouse Snowflake.",
+      "Desenvolvimento de pipelines de ETL robustos utilizando Python, Power Query e Power Automate para a integração, limpeza e carga automatizada de dados.",
+      "Construção de dashboards analíticos em Power BI, com foco em modelagem de dados eficiente, lógica DAX de alta performance e conectividade com múltiplas fontes de dados.",
+      "Elaboração de documentações técnicas rigorosas, como PDS e STD, garantindo a governança, a escalabilidade e a continuidade dos projetos desenvolvidos.",
+    ],
+    technologies: [  "Python", "SQL", "Power BI", "Snowflake", "DBeaver", "Excel", "BotCity", "Fivetran",  "QlikSense", "QlikView", "Qlik Cloud", "Power Automate", "TOTVS Protheus"],
+    icon: <Code className="h-6 w-6 text-primary" />,
+    logo: "images/petz_logo.png",
+  },
+    {
+    year: "05/2025 - 09/2025",
+    title: "Consultor de Desenvolvimento de Software",
+    company: "PORTOREAL ALIMENTOS",
+    description: [
+      "Atuação como Consultor em Desenvolvimento de Software, oferecendo apoio técnico à equipe interna, propondo melhorias em sistemas existentes e auxiliando na implementação de novas soluções.",
+      "Responsável por resolver demandas específicas, otimizar processos, criar e desenvolver novos módulos, além de garantir a continuidade de projetos iniciados anteriormente.",
+      "Foco constante em automação de processos e integração de dados de alta performance.",
+    ],
+    technologies: ["Node.js", "Apps Script", "APIs REST", "App Sheet", "Google Workspace", "Git/GitHub"],
+    icon: <Code className="h-6 w-6 text-primary" />,
+    logo: "images/portoreal.jpg",
+  },
   {
-    year: "12/2024 - Atual",
+    year: "12/2024 - 05/2025",
     title: "Desenvolvedor de Software (Estagiário)",
     company: "PORTOREAL ALIMENTOS",
     description: [
@@ -84,7 +128,7 @@ export default function Experience() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Minha jornada profissional e transição para a área da Tecnologia da Informação
+            Minha jornada profissional e transição para a área da Tecnologia da Informação:
           </p>
         </div>
 

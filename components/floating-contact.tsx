@@ -21,12 +21,12 @@ export default function FloatingContact() {
       label: "Telefone",
       color: "bg-blue-500 hover:bg-blue-600",
     },
-    {
-      icon: <Mail className="h-4 w-4" />,
-      href: "mailto:contato.leonardomendesgomes@gmail.com",
-      label: "Email",
-      color: "bg-red-500 hover:bg-red-600",
-    },
+    // {
+    //   icon: <Mail className="h-4 w-4" />,
+    //   href: "mailto:contato.leonardomendesgomes@gmail.com",
+    //   label: "Email",
+    //   color: "bg-red-500 hover:bg-red-600",
+    // },
     {
       icon: <Github className="h-4 w-4" />,
       href: "https://github.com/MendesLeoADS",
@@ -39,12 +39,12 @@ export default function FloatingContact() {
       label: "LinkedIn",
       color: "bg-blue-600 hover:bg-blue-700",
     },
-    {
-      icon: <Instagram className="h-4 w-4" />,
-      href: "https://www.instagram.com/mleonardoo_/",
-      label: "Instagram",
-      color: "bg-pink-500 hover:bg-pink-600",
-    },
+    // {
+    //   icon: <Instagram className="h-4 w-4" />,
+    //   href: "https://www.instagram.com/mleonardoo_/",
+    //   label: "Instagram",
+    //   color: "bg-pink-500 hover:bg-pink-600",
+    // },
   ]
 
   return (

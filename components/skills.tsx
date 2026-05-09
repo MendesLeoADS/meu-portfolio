@@ -8,18 +8,21 @@ const frontendSkills = ["HTML", "CSS", "JavaScript", "React", "JSX", "Axios", "G
 
 const backendSkills = ["Node.js", "Express.js", "RESTful APIs", "JSON/XML", "Git", "Webhooks", "Middlewares"]
 
-const databaseSkills = ["MySQL", "MongoDB", "Supabase", "PostgreSQL", "Google Planilhas", "Excel"]
+const databaseSkills = ["Snowflake DB", "SQL Server", "MySQL", "MongoDB", "Supabase", "PostgreSQL"]
 
-const toolsSkills = [
-  "GitHub",
-  "App Sheet",
-  "Power Automate",
-  "Power BI",
-  "Clasp",
-  "Postman",
-  "Office Scripts",
-  "Apps Script",
-]
+const businessSkills = ["Power BI", "QlikSense", "QlikView", "Qlik Cloud","Tableau",
+                       "Looker", "Excel", "Google Sheets", "Power Apps", "Power Point"]
+
+// const toolsSkills = [
+//   "GitHub",
+//   "App Sheet",
+//   "Power Automate",
+//   "Power BI",
+//   "Clasp",
+//   "Postman",
+//   "Office Scripts",
+//   "Apps Script",
+// ]
 
 export default function Skills() {
   const containerVariants = {
@@ -49,7 +52,7 @@ export default function Skills() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Combinação de stacks (tecnologias) que utilizo para criar soluções reais
+            Combinação de stacks (tecnologias) que utilizo para criar soluções reais:
           </p>
         </div>
 
@@ -133,7 +136,7 @@ export default function Skills() {
               </div>
               <h3 className="text-xl font-bold mb-4">Ferramentas</h3>
               <div className="grid grid-cols-2 gap-3">
-                {toolsSkills.map((skill, index) => (
+                {businessSkills.map((skill, index) => (
                   <motion.div key={index} className="tech-card" variants={itemVariants}>
                     <span>{skill}</span>
                   </motion.div>
@@ -148,10 +151,9 @@ export default function Skills() {
             <div className="p-4 rounded-full bg-blue-500/20 mb-6 w-fit">
               <LayoutGrid className="h-6 w-6 text-blue-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Low-Code / No-Code</h3>
+            <h3 className="text-xl font-bold mb-3">Analytics e Dados</h3>
             <p className="text-muted-foreground">
-              Desenvolvimento rápido com plataformas como App Sheet e Power Automate, criando soluções eficientes para
-              processos de negócio.
+               Experiência com toda prática de Dados/BI, do ETL à ferramenta de visualização, para traduzir dados em KPIs de valor para diretoria de onde passei.   
             </p>
           </div>
 
@@ -159,10 +161,9 @@ export default function Skills() {
             <div className="p-4 rounded-full bg-purple-500/20 mb-6 w-fit">
               <Cloud className="h-6 w-6 text-purple-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Cloud & Deployment</h3>
+            <h3 className="text-xl font-bold mb-3">Desenvolvimento/ Projetos TI</h3>
             <p className="text-muted-foreground">
-              Habilidade com implantação de aplicações em Google Cloud Platform (GCP), Supabase, Atlas MongoDB, garantindo escalabilidade e
-              disponibilidade.
+                Habilidade com desenvolvimento de soluções, desde a concepção até a implementação, utilizando as tecnologias mencionadas acima para resolver problemas reais e entregar valor.
             </p>
           </div>
 
@@ -170,10 +171,9 @@ export default function Skills() {
             <div className="p-4 rounded-full bg-pink-500/20 mb-6 w-fit">
               <GitBranch className="h-6 w-6 text-pink-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Controle de Versão</h3>
+            <h3 className="text-xl font-bold mb-3">Office</h3>
             <p className="text-muted-foreground">
-              Gerenciamento de código com Git/GitHub, aplicando boas práticas de desenvolvimento colaborativo e
-              versionamento.
+                Experiência sólida com ferramentas do Microsoft Office e Google Workspace, incluindo Excel, Google Sheets, Power BI, Power Apps, Power Point, etc., para análise de dados, automação de tarefas e criação de apresentações impactantes.
             </p>
           </div>
         </div>

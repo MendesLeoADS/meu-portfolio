@@ -15,15 +15,21 @@ export default function About() {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Minha jornada da área Fiscal para o Desenvolvimento de Software
+            Prazer em lhe apresentar minha Jornada até aqui:
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-in show">
             <p className="text-lg">
-              Sou um <span className="text-primary font-semibold">Desenvolvedor</span> com experiência em
-              Code e No/Low-code, criação e consumo de APIs RESTful, e integração com diversos bancos de dados.
+              Olá! Sou o <span className="text-primary font-semibold">Léo</span>, profissional de dados com background
+              em Desenvolvimento de Software e BI, com experiência atuando em empresas bilionárias (Indústria e Varejo). 
+              Tenho vivência na prática com a Stack: Python, SQL, Snowflake, PostgreSQL, MySQL, Power BI, QlikSense, Excel, 
+              Google Sheets, Power Automate, Office Scripts e ênfase de 5 anos com VBA, além do meu lado Desenvolvedor Web/backend.
+            </p>
+
+            <p className="text-lg">
+            Ao longo da minha carreira, fui reconhecido pela minha alta adaptabilidade, resiliência e pela comunicação clara e leve no dia a dia.
             </p>
 
             <p>
@@ -34,15 +40,12 @@ export default function About() {
             </p>
 
             <p>
-              Atualmente, trabalho com uma ampla stack do JavaScript, seja no <span className="font-semibold">frontend</span>,{" "}
-              ou no backend. 
-              <span className="font-semibold"> Sempre</span>, priorizando performance, acessibilidade e experiência do usuário.
-            </p>
-
-            <p>
-              Apaixonado por <span className="text-primary font-semibold">inovação</span> e focado em criar soluções que
-              geram impacto real, estou sempre buscando aprender novas tecnologias e aprimorar minhas habilidades.
-            </p>
+            Atuei diretamente na otimização de processos críticos, com <span className="text-primary font-semibold">grande volume de dados</span>, reduzindo fluxos Financeiros, 
+            Contábeis/ Fiscais, como por exemplo: <span className="text-primary font-semibold">Modelagem de Budget, Forecast, Capex, Variações (Real x Orçado), DRE’s Gerenciais</span>, 
+            pagamentos médicos e remuneração variável de <span className="text-primary font-semibold">vários dias para poucas horas</span>, DIRF, Apurações de ISS, ICMS, INSS, IRRF, PCC, 
+            utilizando Python, SQL e VBA. Também <span className="text-primary font-semibold">desenvolvi integrações de sistemas (via API) com pipelines otimizados</span>, que reduziram operações 
+            de coleta de dados de vários minutos para apenas 5 segundos. Esses foram <span className="text-primary font-semibold">alguns</span> dos meus feitos!               
+             </p>
 
             <div className="flex gap-4 pt-4">
               <Button className="glow-effect" asChild>
@@ -50,7 +53,7 @@ export default function About() {
               </Button>
               <Button variant="outline" className="gap-2">
                 <Download size={16} />
-                <a href="#" download>
+                <a href="\documents\CV LEONARDO MENDES.pdf" download>
                   Download CV
                 </a>
               </Button>
@@ -67,8 +70,8 @@ export default function About() {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Visão Técnica + Negócios</h3>
                     <p className="text-muted-foreground">
-                      Combino conhecimento técnico com entendimento de processos de negócio graças à minha experiência
-                      anterior na área contábil/fiscal e formação em Administração.
+                      Combino conhecimento técnico com entendimento de processos de negócio, isto porque apoio os times 
+                      de Planejamento, Contábil e Fiscal por onde passo e passei.
                     </p>
                   </div>
                 </div>
@@ -83,7 +86,7 @@ export default function About() {
                   </div>
                   <h3 className="text-lg font-semibold">Análise de Dados</h3>
                   <p className="text-sm text-muted-foreground">
-                    Experiência com análise e visualização de dados para tomada de decisões, priorizando boas práticas de ETL.
+                    Experiência com toda prática de Dados/BI, do ETL à ferramenta de visualização, para traduzir dados em KPIs de valor para diretoria de onde passei.
                   </p>
                 </div>
               </Card>
@@ -97,7 +100,7 @@ export default function About() {
                   </div>
                   <h3 className="text-lg font-semibold">Automação</h3>
                   <p className="text-sm text-muted-foreground">
-                    Tenho habilidades em automação de processos com Planilhas, ferramentas No/Low-code e desenvolvimento personalizado.
+                    Grande escopo e pude testar diversos cases com as ferramentas: Power Automate, Apps Script, Python e SQL, Office Scripts, etc.
                   </p>
                 </div>
               </Card>

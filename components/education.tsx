@@ -21,7 +21,7 @@ const educationItems: EducationProps[] = [
     degree: "Tecnólogo - Análise e Desenvolvimento de Sistemas",
     institution: "UNICSUL (Universidade Cruzeiro do Sul)",
     location: "São Paulo, SP",
-    description: "Graduando 2º Semestre - NOTURNO",
+    description: "Graduando 4º Semestre - NOTURNO",
     icon: <GraduationCap className="h-6 w-6 text-primary" />,
   },
   {
@@ -34,7 +34,7 @@ const educationItems: EducationProps[] = [
   },
   {
     period: "04/2021 - 09/2022",
-    degree: "Ensino Técnico em Administração",
+    degree: "Técnico em Administração",
     institution: "SENAC (Serviço Nacional de Aprendizagem Comercial)",
     location: "São Paulo, SP",
     description: "Concluído",
@@ -56,10 +56,12 @@ interface CourseProps {
 
 const courses: CourseProps[] = [
   {
-    institution: "INSTITUTO PROA",
+    institution: "UDEMY",
     courses: [
-      "Curso PROPROFISSÃO em Administração – Carga horária total: 400h",
-      "Conteúdo Técnico em Administração/ Empregabilidade com Certificação Senac",
+      "MODELAGEM DE DADOS PARA DATA WAREHOUSE",
+      "DATA STORYTELLING",
+      "INTRODUÇÃO AOS LARGE LANGUAGE MODELS (LLMs)",
+      "IA PARA ANÁLISE DE DADOS - CHATGPT, GEMINI E COPILOT"
     ],
   },
   {
@@ -79,19 +81,11 @@ const courses: CourseProps[] = [
       "CONTRIBUINDO EM UM PROJETO OPEN SOURCE NO GITHUB",
     ],
   },
-  {
-    institution: "ADA TECH",
-    courses: ["INTRODUÇÃO AO HTML", "INTRODUÇÃO AO CSS"],
-  },
-  {
-    institution: "OUTRAS FORMAÇÕES",
-    courses: [
-      "LÓGICA DE PROGRAMAÇÃO E ALGORITMOS - USJT",
-      "JAVASCRIPT / HTML/ CSS - Básico - FUNDAÇÃO BRADESCO",
-      "LGPD - LEI GERAL DE PROTEÇÃO DE DADOS - Básico",
-      "MICROSOFT SHARE POINT - Básico",
-    ],
-  },
+  // {
+  //   institution: "ADA TECH",
+  //   courses: ["INTRODUÇÃO AO HTML", "INTRODUÇÃO AO CSS"],
+  // },
+
 ]
 
 export default function Education() {
@@ -188,13 +182,11 @@ export default function Education() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               "Viagens intermunicipais e interestaduais a trabalho",
-              "Feira de Profissões",
+              "Eventos de Lançamentos automobílisticos",
+              "Eventos privados com Representantes do Governo Brasileiro (Presidente, Ministros, etc.)",
               "Visitas Culturais",
               "Visitas Técnicas",
-              "Workshops",
-              "Visita ao Centro Histórico",
-              "Oficina Cultural",
-              "FAAP",
+              "Workshops"
             ].map((activity, index) => (
               <motion.div
                 key={index}

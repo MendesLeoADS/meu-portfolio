@@ -63,7 +63,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#hero" className="text-2xl font-bold gradient-text">
-          LM
+          Léo Mendes
         </a>
 
         {/* Desktop Menu */}

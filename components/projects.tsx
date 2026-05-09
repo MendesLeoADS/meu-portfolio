@@ -23,38 +23,38 @@ const projectsData = [
     live: "https://drive.google.com/file/d/199y2vmhkYo7WMaln69AZxrprFyciv8Vu/view?usp=sharing",
     category: "Apps",
   },
-  {
-    id: 2,
-    title: "Automação de Relatórios Fiscais",
-    description:
-      "Sistema de automação para geração de relatórios fiscais usando Google Apps Script e integração com APIs.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["Google Apps Script", "REST APIs", "JavaScript"],
-    github: "https://github.com/MendesLeoADS/projeto2",
-    live: "#",
-    category: "Automação",
-  },
-  {
-    id: 3,
-    title: "Aplicativo de Gestão de Tarefas",
-    description:
-      "App para gestão de tarefas desenvolvido com App Sheet, com notificações e sincronização com Google Calendar.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["App Sheet", "Google Workspace", "REST APIs"],
-    github: "#",
-    live: "#",
-    category: "Apps",
-  },
-  {
-    id: 4,
-    title: "Dashboard de Indicadores",
-    description: "Dashboard interativo para visualização de métricas e KPIs de negócio.",
-    image: "/placeholder.svg?height=300&width=500",
-    technologies: ["JavaScript", "Chart.js", "HTML/CSS"],
-    github: "https://github.com/MendesLeoADS/projeto4",
-    live: "#",
-    category: "Web",
-  },
+  // {
+  //   id: 2,
+  //   title: "Automação de Relatórios Fiscais",
+  //   description:
+  //     "Sistema de automação para geração de relatórios fiscais usando Google Apps Script e integração com APIs.",
+  //   image: "/placeholder.svg?height=300&width=500",
+  //   technologies: ["Google Apps Script", "REST APIs", "JavaScript"],
+  //   github: "https://github.com/MendesLeoADS/projeto2",
+  //   live: "#",
+  //   category: "Automação",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Aplicativo de Gestão de Tarefas",
+  //   description:
+  //     "App para gestão de tarefas desenvolvido com App Sheet, com notificações e sincronização com Google Calendar.",
+  //   image: "/placeholder.svg?height=300&width=500",
+  //   technologies: ["App Sheet", "Google Workspace", "REST APIs"],
+  //   github: "#",
+  //   live: "#",
+  //   category: "Apps",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Dashboard de Indicadores",
+  //   description: "Dashboard interativo para visualização de métricas e KPIs de negócio.",
+  //   image: "/placeholder.svg?height=300&width=500",
+  //   technologies: ["JavaScript", "Chart.js", "HTML/CSS"],
+  //   github: "https://github.com/MendesLeoADS/projeto4",
+  //   live: "#",
+  //   category: "Web",
+  // },
 ]
 
 export default function Projects() {

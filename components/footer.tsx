@@ -15,7 +15,7 @@ export default function Footer() {
               Leonardo Mendes
             </a>
             <p className="text-muted-foreground mt-2 max-w-md">
-              Desenvolvedor Full Stack apaixonado por criar soluções tecnológicas que transformam ideias em realidade.
+              Desenvolvedor e Engenheiro de Automações apaixonado por criar soluções tecnológicas que transformam ideias em realidade.
             </p>
           </div>
 

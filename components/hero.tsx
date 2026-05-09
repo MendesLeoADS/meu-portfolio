@@ -44,7 +44,7 @@ export default function Hero() {
               </h2>
             </div>
             <p className="text-muted-foreground text-lg mb-8 max-w-xl">
-              Curioso ao extremo e apaixonado em soluções tecnológicas com experiência em desenvolvimento full stack e automação de
+              Curioso ao extremo e apaixonado em soluções tecnológicas com experiência em desenvolvimento e automação de
               processos.
             </p>
 
