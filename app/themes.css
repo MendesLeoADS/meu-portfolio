@@ -123,7 +123,11 @@
   color: #1a1a1a;
 }
 
-:root.lang-es .skill-card-es h3,
+:root.lang-es .skill-card-es h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 :root.lang-es .skill-card-es p {
   color: #1a1a1a;
 }
@@ -135,7 +139,11 @@
   color: #1a1a1a;
 }
 
-:root.lang-es .about-card-es h3,
+:root.lang-es .about-card-es h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 :root.lang-es .about-card-es p {
   color: #1a1a1a;
 }
@@ -148,5 +156,19 @@
 }
 
 :root.lang-es .project-card-es h3 {
-  color: #1a1a1a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Global heading styles for Spanish cards */
+:root.lang-es .card h3,
+:root.lang-es .card h4 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+:root.lang-es [class*="card"] h3,
+:root.lang-es [class*="card"] h4 {
+  color: #ffffff;
+  font-weight: 700;
 }
