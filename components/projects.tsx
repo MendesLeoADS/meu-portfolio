@@ -19,7 +19,9 @@ const projectsData = [
   {
     id: 1,
     title: "Maquininha de Pagamentos",
+    titleES: "Máquina de Pagos",
     description: "Aplicação que simula uma maquininha de cartão para pagamentos em Débito, Crédito ou até QRCode.",
+    descriptionES: "Aplicación que simula una máquina de tarjeta para pagos en Débito, Crédito o QR Code.",
     image: "imgProjects/appMaquinaCartao.png",
     technologies: ["Java", "Maven", "Scanner", "UUID"],
     github: "https://github.com/MendesLeoADS/maquininhaDeCartao",
@@ -29,8 +31,11 @@ const projectsData = [
   {
     id: 2,
     title: "Site Institucional Academia Artes Marciais",
+    titleES: "Sitio Web Institucional Academia de Artes Marciales",
     description:
       "Site Institucional da Academia Artes Marciais Black Lotus Vila Formosa, focado em atrair novos alunos e fornecer informações sobre os serviços oferecidos pela academia. Sou o responsável pelo desenvolvimento, manutenção e hospedagem do site, garantindo que ele esteja sempre atualizado e funcionando corretamente para atender às necessidades da academia e de seus clientes.",
+    descriptionES:
+      "Sitio web institucional de la Academia de Artes Marciales Black Lotus Vila Formosa, enfocado en atraer nuevos estudiantes y proporcionar información sobre los servicios ofrecidos. Soy responsable del desarrollo, mantenimiento y alojamiento del sitio, asegurando que siempre esté actualizado y funcionando correctamente para satisfacer las necesidades de la academia y sus clientes.",
     image: "imgProjects/siteBlackLotus.png",
     technologies: [ "JavaScript", "Vercel", "WhatsApp" ],
     github: "https://github.com/MendesLeoADS/siteBlackLotusVilaFormosaV2",
@@ -40,8 +45,11 @@ const projectsData = [
   {
     id: 3,
     title: "Centenas de Automações para diferentes Cases",
+    titleES: "Cientos de Automatizaciones para Diferentes Casos",
     description:
       "Já atuei no desenvolvimento de centenas de automações como Business Partner de Empresas do Varejo, grandes Indústrias, Atacado, enfim. Em áreas: Contábil, Fiscal, Financeira, FP&A, Segurança de Frotas, entre outras. Lhe convido a uma conversa, para eu explanar melhor esses projetos, uma vez que sob contrato, não podem ser expostos.",
+    descriptionES:
+      "He desarrollado cientos de automatizaciones como Business Partner en empresas de retail, grandes industrias y distribuidoras. En áreas de: Contabilidad, Fiscalidad, Finanzas, FP&A, Seguridad de Flotas, entre otras. Le invito a una conversación para explicar mejor estos proyectos, ya que bajo contrato no pueden ser expuestos.",
     image: "imgProjects/automacoes.png",
     technologies: ["App Sheet", "Google Workspace", "REST APIs"],
     github: "#",
@@ -51,7 +59,9 @@ const projectsData = [
   {
     id: 4,
     title: "BI e Análise de Dados",
+    titleES: "BI y Análisis de Datos",
     description: "Atuei no desenvolvimento de Dashboards, utilizando Power BI/ Qlik Sense, para análise de indicadores de vendas e desempenho, DRE´s, Apurações Fiscais, pagamentos, gestão de frotas, em grandes empresas de varejo, indústria de Latícinios, Tempero e Automobilística, entre outros. Lhe convido a uma conversa, para eu explanar melhor esses projetos, uma vez que sob contrato, não podem ser expostos.",
+    descriptionES: "He desarrollado Dashboards utilizando Power BI y Qlik Sense para análisis de indicadores de ventas, desempeño, análisis fiscales, pagos y gestión de flotas en grandes empresas de retail, industria láctea, especias y automoción. Le invito a una conversación para explicar mejor estos proyectos, ya que bajo contrato no pueden ser expuestos.",
     image: "imgProjects/bi_dados.png",
     technologies: ["Power BI", "Tableau", "Qlik", "SQL", "Excel"],
     github: "#",
@@ -133,10 +143,10 @@ export default function Projects() {
                     </div>
                     <CardContent className="py-6 flex-grow">
                       <div className="flex items-start justify-between mb-3">
-                        <h3 className="text-xl font-bold">{project.title}</h3>
+                        <h3 className="text-xl font-bold">{language === 'es' ? project.titleES : project.title}</h3>
                         <FolderGit2 className="h-5 w-5 text-primary" />
                       </div>
-                      <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+                      <p className="text-muted-foreground text-sm mb-4">{language === 'es' ? project.descriptionES : project.description}</p>
                       <div className="flex flex-wrap gap-2 mt-auto">
                         {project.technologies.map((tech, idx) => (
                           <Badge key={idx} variant="secondary" className="text-xs">
