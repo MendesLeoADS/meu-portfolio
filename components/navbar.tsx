@@ -4,20 +4,25 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import LanguageSelector from "./language-selector"
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
-const navItems = [
-  { name: "Início", href: "#hero" },
-  { name: "Sobre", href: "#about" },
-  { name: "Habilidades", href: "#skills" },
-  { name: "Experiência", href: "#experience" },
-  { name: "Formação", href: "#education" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Contato", href: "#contact" },
+const getNavItems = (lang: 'pt' | 'es') => [
+  { name: translations[lang].nav.inicio, href: "#hero" },
+  { name: translations[lang].nav.sobre, href: "#about" },
+  { name: translations[lang].nav.habilidades, href: "#skills" },
+  { name: translations[lang].nav.experiencia, href: "#experience" },
+  { name: translations[lang].nav.formacao, href: "#education" },
+  { name: translations[lang].nav.projetos, href: "#projects" },
+  { name: translations[lang].nav.contato, href: "#contact" },
 ]
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { language } = useLanguage()
+  const navItems = getNavItems(language)
 
   // Função para verificar se a seção existe
   const checkSectionExists = () => {
@@ -89,15 +94,19 @@ export default function Navbar() {
                 handleNavClick("#contact")
               }}
             >
-              Entre em Contato
+              {translations[language].nav.entreEmContato}
             </a>
           </Button>
+          <LanguageSelector />
         </div>
 
         {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X /> : <Menu />}
-        </Button>
+        <div className="md:hidden flex items-center gap-2">
+          <LanguageSelector />
+          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X /> : <Menu />}
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -122,7 +131,7 @@ export default function Navbar() {
             </a>
           ))}
           <Button className="mt-6" onClick={() => handleNavClick("#contact")} asChild>
-            <a href="#contact">Entre em Contato</a>
+            <a href="#contact">{translations[language].nav.entreEmContato}</a>
           </Button>
         </div>
       </div>

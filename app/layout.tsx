@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider"
+import { LanguageProvider } from "@/context/language-context"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import type React from "react"
@@ -23,6 +24,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              const savedLanguage = localStorage.getItem('language') || 'pt';
+              document.documentElement.classList.add('lang-' + savedLanguage);
+            })();
+          `,
+        }}
+      />
       <head>
         {/* Adicionar Font Awesome para ícones de tecnologia */}
         <link
@@ -36,9 +47,11 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
       </head>
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-          {children}
-        </ThemeProvider>
+        <LanguageProvider>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   )
