@@ -24,16 +24,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function() {
-              const savedLanguage = localStorage.getItem('language') || 'pt';
-              document.documentElement.classList.add('lang-' + savedLanguage);
-            })();
-          `,
-        }}
-      />
       <head>
         {/* Adicionar Font Awesome para ícones de tecnologia */}
         <link

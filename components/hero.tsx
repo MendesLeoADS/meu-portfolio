@@ -3,10 +3,13 @@
 import { motion } from "framer-motion"
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
 import { useEffect, useState } from "react"
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
 export default function Hero() {
   const [typedText, setTypedText] = useState("")
-  const textToType = "Seja Bem Vindo(a) ao meu Portfólio..."
+  const { language } = useLanguage()
+  const textToType = translations[language].hero.welcome
   const [textIndex, setTextIndex] = useState(0)
 
   useEffect(() => {
@@ -44,8 +47,7 @@ export default function Hero() {
               </h2>
             </div>
             <p className="text-muted-foreground text-lg mb-8 max-w-xl">
-              Curioso ao extremo e apaixonado em soluções tecnológicas com experiência em desenvolvimento e automação de
-              processos.
+              {translations[language].hero.description}
             </p>
 
             <div className="flex items-center gap-6 mt-8">
@@ -95,7 +97,7 @@ export default function Hero() {
           onClick={scrollToAbout}
           style={{ cursor: "pointer" }}
         >
-          <div className="text-sm text-muted-foreground mb-2">Role para baixo</div>
+          <div className="text-sm text-muted-foreground mb-2">{translations[language].hero.scrollDown}</div>
           <ArrowDown className="mx-auto h-5 w-5 text-primary" />
         </motion.div>
       </div>

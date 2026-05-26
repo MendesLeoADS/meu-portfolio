@@ -16,7 +16,7 @@
   --accent-foreground: 0 0% 98%;
 }
 
-/* Tema Espanha (ES) - Cores da bandeira: Vermelho (#DC143C) e Amarelo (#FFC400) */
+/* Tema Espanha (ES) - Cores pastel da bandeira: Vermelho suave e Amarelo suave */
 :root.lang-es {
   --background: 0 0% 5%;
   --foreground: 0 0% 98%;
@@ -24,14 +24,14 @@
   --card-foreground: 0 0% 98%;
   --popover: 0 0% 8%;
   --popover-foreground: 0 0% 98%;
-  --primary: 0 100% 42%;
+  --primary: 0 80% 55%;
   --primary-foreground: 0 0% 98%;
-  --secondary: 48 100% 50%;
-  --secondary-foreground: 0 0% 5%;
+  --secondary: 48 95% 65%;
+  --secondary-foreground: 0 0% 15%;
   --muted: 0 0% 20%;
   --muted-foreground: 0 0% 70%;
-  --accent: 48 100% 50%;
-  --accent-foreground: 0 0% 5%;
+  --accent: 48 95% 65%;
+  --accent-foreground: 0 0% 15%;
 }
 
 /* Gradiente de texto para o tema Portugal */
@@ -81,9 +81,9 @@
   animation: gradientAnimation 15s ease infinite;
 }
 
-/* Background animado para Espanha */
+/* Background animado para Espanha - Cores pastel */
 :root.lang-es .animated-gradient {
-  background: linear-gradient(-45deg, #1a0000, #330000, #660000, #990000);
+  background: linear-gradient(-45deg, #1a0a0a, #2d1414, #4a2020, #6b3030);
   background-size: 400% 400%;
   animation: gradientAnimation 15s ease infinite;
 }
@@ -108,4 +108,27 @@
 :root.lang-es .bg-gradient-mesh {
   background-image: linear-gradient(to right, rgba(220, 20, 60, 0.1) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(220, 20, 60, 0.1) 1px, transparent 1px);
+}
+
+/* Card Gradients para Espanha - Degradê cinza para amarelo pastel */
+:root.lang-es .card-gradient-es {
+  background: linear-gradient(135deg, rgba(100, 100, 100, 0.15) 0%, rgba(255, 220, 130, 0.2) 100%);
+}
+
+/* Skill Cards com degradê para Espanha */
+:root.lang-es .skill-card-es {
+  background: linear-gradient(135deg, rgba(120, 120, 120, 0.1) 0%, rgba(255, 215, 100, 0.15) 100%);
+  border: 1px solid rgba(255, 200, 80, 0.2);
+}
+
+/* About Cards com degradê para Espanha */
+:root.lang-es .about-card-es {
+  background: linear-gradient(135deg, rgba(80, 80, 80, 0.2) 0%, rgba(255, 230, 150, 0.25) 100%);
+  border: 1px solid rgba(220, 20, 60, 0.15);
+}
+
+/* Project Cards com degradê para Espanha */
+:root.lang-es .project-card-es {
+  background: linear-gradient(135deg, rgba(100, 100, 100, 0.12) 0%, rgba(255, 220, 120, 0.18) 100%);
+  border: 1px solid rgba(255, 215, 100, 0.2);
 }

@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion"
 import { Cloud, Database, GitBranch, Globe, Layers, LayoutGrid, Server } from "lucide-react"
-
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
 const frontendSkills = ["HTML", "CSS", "JavaScript", "React", "JSX", "Axios", "Git"]
 
@@ -25,6 +26,9 @@ const businessSkills = ["Power BI", "QlikSense", "QlikView", "Qlik Cloud","Table
 // ]
 
 export default function Skills() {
+  const { language } = useLanguage()
+  const t = translations[language].skills
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -48,11 +52,11 @@ export default function Skills() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Minhas <span className="gradient-text">Habilidades</span>
+            {t.title} <span className="gradient-text">{t.subtitle}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Combinação de stacks (tecnologias) que utilizo para criar soluções reais:
+            {t.intro}
           </p>
         </div>
 
@@ -64,11 +68,11 @@ export default function Skills() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
+            <div className="skill-card-es bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
               <div className="p-4 rounded-full bg-primary/20 mb-6 w-fit">
                 <Globe className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Frontend</h3>
+              <h3 className="text-xl font-bold mb-4">{t.frontend}</h3>
               <div className="grid grid-cols-2 gap-3">
                 {frontendSkills.map((skill, index) => (
                   <motion.div key={index} className="tech-card" variants={itemVariants}>
@@ -86,11 +90,11 @@ export default function Skills() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
+            <div className="skill-card-es bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
               <div className="p-4 rounded-full bg-primary/20 mb-6 w-fit">
                 <Server className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Backend</h3>
+              <h3 className="text-xl font-bold mb-4">{t.backend}</h3>
               <div className="grid grid-cols-2 gap-3">
                 {backendSkills.map((skill, index) => (
                   <motion.div key={index} className="tech-card" variants={itemVariants}>
@@ -108,11 +112,11 @@ export default function Skills() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
+            <div className="skill-card-es bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
               <div className="p-4 rounded-full bg-primary/20 mb-6 w-fit">
                 <Database className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Banco de Dados</h3>
+              <h3 className="text-xl font-bold mb-4">{t.database}</h3>
               <div className="grid grid-cols-2 gap-3">
                 {databaseSkills.map((skill, index) => (
                   <motion.div key={index} className="tech-card" variants={itemVariants}>
@@ -130,11 +134,11 @@ export default function Skills() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div className="bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
+            <div className="skill-card-es bg-secondary/50 p-6 rounded-2xl h-full backdrop-blur-md glow-effect">
               <div className="p-4 rounded-full bg-primary/20 mb-6 w-fit">
                 <Layers className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Ferramentas</h3>
+              <h3 className="text-xl font-bold mb-4">{t.tools}</h3>
               <div className="grid grid-cols-2 gap-3">
                 {businessSkills.map((skill, index) => (
                   <motion.div key={index} className="tech-card" variants={itemVariants}>
@@ -147,33 +151,33 @@ export default function Skills() {
         </div>
 
         <div className="mt-16 grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-8 rounded-2xl animate-in backdrop-blur-md glow-effect">
+          <div className="skill-card-es bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-8 rounded-2xl animate-in backdrop-blur-md glow-effect">
             <div className="p-4 rounded-full bg-blue-500/20 mb-6 w-fit">
               <LayoutGrid className="h-6 w-6 text-blue-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Analytics e Dados</h3>
+            <h3 className="text-xl font-bold mb-3">{t.analytics}</h3>
             <p className="text-muted-foreground">
-               Experiência com toda prática de Dados/BI, do ETL à ferramenta de visualização, para traduzir dados em KPIs de valor para diretoria de onde passei.   
+               {t.analyticDesc}
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 p-8 rounded-2xl animate-in backdrop-blur-md glow-effect">
+          <div className="skill-card-es bg-gradient-to-br from-purple-500/10 to-pink-500/10 p-8 rounded-2xl animate-in backdrop-blur-md glow-effect">
             <div className="p-4 rounded-full bg-purple-500/20 mb-6 w-fit">
               <Cloud className="h-6 w-6 text-purple-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Desenvolvimento/ Projetos TI</h3>
+            <h3 className="text-xl font-bold mb-3">{t.dev}</h3>
             <p className="text-muted-foreground">
-                Habilidade com desenvolvimento de soluções, desde a concepção até a implementação, utilizando as tecnologias mencionadas acima para resolver problemas reais e entregar valor.
+                {t.devDesc}
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-pink-500/10 to-blue-500/10 p-8 rounded-2xl animate-in backdrop-blur-md glow-effect">
+          <div className="skill-card-es bg-gradient-to-br from-pink-500/10 to-blue-500/10 p-8 rounded-2xl animate-in backdrop-blur-md glow-effect">
             <div className="p-4 rounded-full bg-pink-500/20 mb-6 w-fit">
               <GitBranch className="h-6 w-6 text-pink-500" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Office</h3>
+            <h3 className="text-xl font-bold mb-3">{t.office}</h3>
             <p className="text-muted-foreground">
-                Experiência sólida com ferramentas do Microsoft Office e Google Workspace, incluindo Excel, Google Sheets, Power BI, Power Apps, Power Point, etc., para análise de dados, automação de tarefas e criação de apresentações impactantes.
+                {t.officeDesc}
             </p>
           </div>
         </div>

@@ -18,9 +18,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     // Carregar idioma salvo do localStorage
     const savedLanguage = typeof window !== 'undefined' ? localStorage.getItem('language') as Language | null : null
-    if (savedLanguage && (savedLanguage === 'pt' || savedLanguage === 'es')) {
-      setLanguageState(savedLanguage)
+    const langToSet = (savedLanguage && (savedLanguage === 'pt' || savedLanguage === 'es')) ? savedLanguage : 'pt'
+    
+    setLanguageState(langToSet)
+    
+    // Aplicar classe ao documento para mudar tema
+    if (typeof document !== 'undefined') {
+      document.documentElement.classList.remove('lang-pt', 'lang-es')
+      document.documentElement.classList.add(`lang-${langToSet}`)
     }
+    
     setMounted(true)
   }, [])
 
@@ -50,7 +57,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext)
   if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider')
+    // Return default context if not within provider
+    return { language: 'pt' as Language, setLanguage: () => {} }
   }
   return context
 }

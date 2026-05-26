@@ -1,11 +1,16 @@
 'use client'
 
-import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
+import Navbar from './navbar'
 
-const Navbar = dynamic(() => import('./navbar'), {
-  ssr: false,
-})
+function NavbarContent() {
+  return <Navbar />
+}
 
 export default function NavbarWrapper() {
-  return <Navbar />
+  return (
+    <Suspense fallback={<div className="h-16" />}>
+      <NavbarContent />
+    </Suspense>
+  )
 }

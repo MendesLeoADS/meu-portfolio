@@ -5,6 +5,8 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { GraduationCap, BookOpen, Calendar, MapPin, Code } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
 interface EducationProps {
   period: string
@@ -89,16 +91,19 @@ const courses: CourseProps[] = [
 ]
 
 export default function Education() {
+  const { language } = useLanguage()
+  const t = translations[language].education
+
   return (
     <section id="education" className="py-20 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Minha <span className="gradient-text">Formação</span>
+            {t.title} <span className="gradient-text">{t.subtitle}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Educação formal e cursos complementares para meu desenvolvimento profissional
+            {t.intro}
           </p>
         </div>
 
@@ -106,7 +111,7 @@ export default function Education() {
           <div>
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
               <GraduationCap className="h-6 w-6 text-primary" />
-              Educação Formal
+              {t.formal}
             </h3>
 
             <div className="space-y-6">
@@ -145,7 +150,7 @@ export default function Education() {
           <div>
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
               <Code className="h-6 w-6 text-primary" />
-              Cursos Complementares
+              {t.complementary}
             </h3>
 
             <div className="space-y-8">
@@ -178,7 +183,7 @@ export default function Education() {
         </div>
 
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 rounded-xl animate-in">
-          <h3 className="text-xl font-bold mb-4">Atividades Extracurriculares</h3>
+          <h3 className="text-xl font-bold mb-4">{t.extracurricular}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               "Viagens intermunicipais e interestaduais a trabalho",

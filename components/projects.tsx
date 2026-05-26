@@ -7,9 +7,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { motion } from "framer-motion"
 import { ExternalLink, FolderGit2, Github } from "lucide-react"
 import { useState } from "react"
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
 // Este componente permitirá que o Leonardo adicione seus projetos depois
 const projectCategories = ["Todos", "Web", "Apps", "Automação", "Dashboard"]
+const projectCategoriesES = ["Todos", "Web", "Apps", "Automatización", "Dashboard"]
 
 // Projetos placeholder que podem ser substituídos com projetos reais
 const projectsData = [
@@ -58,28 +61,32 @@ const projectsData = [
 ]
 
 export default function Projects() {
+  const { language } = useLanguage()
+  const t = translations[language].projects
   const [activeCategory, setActiveCategory] = useState("Todos")
 
   const filteredProjects =
     activeCategory === "Todos" ? projectsData : projectsData.filter((project) => project.category === activeCategory)
+
+  const categories = language === 'es' ? projectCategoriesES : projectCategories
 
   return (
     <section id="projects" className="py-20 bg-blue-950/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Meus <span className="gradient-text">Projetos</span>
+            {t.title} <span className="gradient-text">{t.subtitle}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Conheça alguns dos projetos que desenvolvi aplicando minhas habilidades técnicas
+            {t.intro}
           </p>
         </div>
 
         <Tabs defaultValue="Todos" className="w-full mb-12">
           <div className="flex justify-center mb-8">
             <TabsList>
-              {projectCategories.map((category) => (
+              {categories.map((category) => (
                 <TabsTrigger key={category} value={category} onClick={() => setActiveCategory(category)}>
                   {category}
                 </TabsTrigger>
@@ -98,7 +105,7 @@ export default function Projects() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Card className="overflow-hidden h-full flex flex-col bg-secondary/50 hover:shadow-lg hover:shadow-primary/20 transition-all">
+                  <Card className="project-card-es overflow-hidden h-full flex flex-col bg-secondary/50 hover:shadow-lg hover:shadow-primary/20 transition-all">
                     <div className="relative overflow-hidden aspect-video">
                       <img
                         src={project.image || "/placeholder.svg"}
@@ -157,7 +164,7 @@ export default function Projects() {
         </Tabs>
 
         <div className="text-center animate-in">
-          <p className="text-muted-foreground mb-6">Quer ver mais dos meus projetos e contribuições?</p>
+          <p className="text-muted-foreground mb-6">{t.more}</p>
           <Button size="lg" variant="default" asChild>
             <a
               href="https://github.com/MendesLeoADS"
@@ -166,7 +173,7 @@ export default function Projects() {
               className="flex items-center gap-2"
             >
               <Github className="h-5 w-5" />
-              Visite meu GitHub
+              {t.visitGithub}
             </a>
           </Button>
         </div>

@@ -4,6 +4,8 @@ import type React from "react"
 
 import { motion } from "framer-motion"
 import { Code, HelpCircle, LineChart, ListChecks, Terminal } from "lucide-react"
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
 interface ExperienceProps {
   year: string
@@ -119,16 +121,19 @@ const experiences: ExperienceProps[] = [
 ]
 
 export default function Experience() {
+  const { language } = useLanguage()
+  const t = translations[language].experience
+
   return (
     <section id="experience" className="py-20 bg-blue-950/30 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Minhas <span className="gradient-text">Experiências</span>
+            {t.title} <span className="gradient-text">{t.subtitle}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Minha jornada profissional e transição para a área da Tecnologia da Informação:
+            {t.intro}
           </p>
         </div>
 
