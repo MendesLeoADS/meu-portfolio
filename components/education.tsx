@@ -212,14 +212,21 @@ export default function Education() {
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 p-8 rounded-xl animate-in">
           <h3 className="text-xl font-bold mb-4">{t.extracurricular}</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
+            {(language === 'es' ? [
+              "Viajes intermunicipales e interestaduales por trabajo",
+              "Eventos de Lanzamiento de automóviles",
+              "Eventos privados con Representantes del Gobierno Brasileño (Presidente, Ministros, etc.)",
+              "Visitas Culturales",
+              "Visitas Técnicas",
+              "Talleres"
+            ] : [
               "Viagens intermunicipais e interestaduais a trabalho",
               "Eventos de Lançamentos automobílisticos",
               "Eventos privados com Representantes do Governo Brasileiro (Presidente, Ministros, etc.)",
               "Visitas Culturais",
               "Visitas Técnicas",
               "Workshops"
-            ].map((activity, index) => (
+            ]).map((activity, index) => (
               <motion.div
                 key={index}
                 className="bg-secondary/50 p-4 rounded-lg text-center text-sm"

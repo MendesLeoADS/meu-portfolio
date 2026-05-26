@@ -162,7 +162,7 @@ export default function Projects() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Ver Detalhes
+                          {language === 'es' ? 'Ver Detalles' : 'Ver Detalhes'}
                         </a>
                       </Button>
                     </CardFooter>
