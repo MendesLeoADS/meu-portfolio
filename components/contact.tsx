@@ -9,8 +9,12 @@ import { Textarea } from "@/components/ui/textarea"
 import { motion } from "framer-motion"
 import { Github, Instagram, Linkedin, Mail, MapPin, MessageSquare, Phone, Send } from "lucide-react"
 import { useState } from "react"
+import { useLanguage } from "@/context/language-context"
+import { translations } from "@/lib/translations"
 
 export default function Contact() {
+  const { language } = useLanguage()
+  const t = translations[language].contact
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,20 +65,20 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
-      title: "Telefone",
+      title: t.phone,
       details: "+55 11 97023-3251",
       link: "tel:+5511970233251",
     },
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
-      title: "Email",
+      title: t.email,
       details: "devleonardo.tech@gmail.com",
       link: "mailto:devleonardo.tech@gmail.com",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
-      title: "Localização",
-      details: "São Paulo - SP, Brasil",
+      title: t.location,
+      details: language === 'es' ? "São Paulo - SP, Brasil" : "São Paulo - SP, Brasil",
       link: "https://maps.google.com/?q=São+Paulo,+SP",
     },
   ]
@@ -111,11 +115,11 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            Entre em <span className="gradient-text">Contato</span>
+            {t.title} <span className="gradient-text">{t.subtitle}</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Tem um projeto em mente ou deseja discutir uma oportunidade? Estou à disposição!
+            {t.intro}
           </p>
         </div>
 
@@ -134,7 +138,7 @@ export default function Contact() {
                   <CardContent className="p-6">
                     <a
                       href={info.link}
-                      target={info.title === "Localização" ? "_blank" : "_self"}
+                      target={info.title === t.location ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                       className="flex items-start gap-4"
                     >
@@ -155,7 +159,7 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl font-bold mb-4">Minhas redes sociais</h3>
+              <h3 className="text-xl font-bold mb-4">{t.socialMedia}</h3>
               <div className="flex flex-wrap gap-4">
                 {socialMedia.map((social, index) => (
                   <a
@@ -181,18 +185,18 @@ export default function Contact() {
           >
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-6">Envie uma mensagem</h3>
+                <h3 className="text-xl font-bold mb-6">{t.formTitle}</h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div>
       <label htmlFor="name" className="block text-sm font-medium mb-2">
-        Nome completo
+        {t.fullName}
       </label>
       <Input
         id="name"
         name="name"
-        placeholder="Seu nome"
+        placeholder={t.yourName}
         value={formData.name}
         onChange={handleChange}
         required
@@ -200,13 +204,13 @@ export default function Contact() {
     </div>
     <div>
       <label htmlFor="email" className="block text-sm font-medium mb-2">
-        Email
+        {t.email}
       </label>
       <Input
         id="email"
         name="email"
         type="email"
-        placeholder="seu.email@exemplo.com"
+        placeholder={t.emailPlaceholder}
         value={formData.email}
         onChange={handleChange}
         required
@@ -215,12 +219,12 @@ export default function Contact() {
   </div>
   <div>
     <label htmlFor="subject" className="block text-sm font-medium mb-2">
-      Assunto
+      {t.subject}
     </label>
     <Input
       id="subject"
       name="subject"
-      placeholder="Sobre o que você quer conversar?"
+      placeholder={t.subjectPlaceholder}
       value={formData.subject}
       onChange={handleChange}
       required
@@ -228,12 +232,12 @@ export default function Contact() {
   </div>
   <div>
     <label htmlFor="message" className="block text-sm font-medium mb-2">
-      Mensagem
+      {t.message}
     </label>
     <Textarea
       id="message"
       name="message"
-      placeholder="Escreva sua mensagem aqui..."
+      placeholder={t.messagePlaceholder}
       rows={5}
       value={formData.message}
       onChange={handleChange}
@@ -242,7 +246,7 @@ export default function Contact() {
   </div>
   <Button type="submit" className="w-full gap-2">
     <Send className="h-4 w-4" />
-    Enviar Mensagem
+    {t.sendButton}
   </Button>
 </form>
 

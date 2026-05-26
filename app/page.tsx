@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import Hero from "@/components/hero"
 import About from "@/components/about"
 import Experience from "@/components/experience"
@@ -8,18 +8,14 @@ import Skills from "@/components/skills"
 import Education from "@/components/education"
 import Projects from "@/components/projects"
 import Contact from "@/components/contact"
-import Navbar from "@/components/navbar"
+import NavbarWrapper from "@/components/navbar-wrapper"
 import FloatingContact from "@/components/floating-contact"
 import Footer from "@/components/footer"
 import AnimatedBackground from "@/components/animated-background"
 import SimpleCodeIcons from "@/components/simple-code-icons"
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-
   useEffect(() => {
-    setMounted(true)
-
     // Animation for sections - melhorado para garantir que funcione
     const observer = new IntersectionObserver(
       (entries) => {
@@ -58,7 +54,7 @@ export default function Home() {
     <main className="min-h-screen">
       <AnimatedBackground />
       <SimpleCodeIcons />
-      <Navbar />
+      <NavbarWrapper />
       <FloatingContact />
       <Hero />
       <About />

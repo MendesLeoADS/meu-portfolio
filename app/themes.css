@@ -1,0 +1,174 @@
+/* Tema Portugal (PT) - Padrão com cores azul */
+:root.lang-pt {
+  --background: 217 91% 5%;
+  --foreground: 0 0% 98%;
+  --card: 217 91% 5%;
+  --card-foreground: 0 0% 98%;
+  --popover: 217 91% 5%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 217 91.2% 59.8%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 217 30% 15%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 217 30% 15%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 217 30% 15%;
+  --accent-foreground: 0 0% 98%;
+}
+
+/* Tema Espanha (ES) - Cores pastel da bandeira: Vermelho suave e Amarelo suave */
+:root.lang-es {
+  --background: 0 0% 5%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 8%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 80% 55%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 45 100% 72%;
+  --secondary-foreground: 0 0% 15%;
+  --muted: 0 0% 20%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 45 100% 72%;
+  --accent-foreground: 0 0% 15%;
+}
+
+/* Gradiente de texto para o tema Portugal */
+:root.lang-pt .gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-600;
+}
+
+/* Gradiente de texto para o tema Espanha */
+:root.lang-es .gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-400;
+}
+
+/* Glass effect para Portugal */
+:root.lang-pt .glass-effect {
+  @apply bg-blue-950/50 backdrop-blur-md;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+/* Glass effect para Espanha */
+:root.lang-es .glass-effect {
+  @apply bg-red-950/50 backdrop-blur-md;
+  border-bottom: 1px solid rgba(220, 20, 60, 0.2);
+}
+
+/* Glow effect para Portugal */
+:root.lang-pt .glow-effect {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+:root.lang-pt .glow-effect:hover {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+}
+
+/* Glow effect para Espanha */
+:root.lang-es .glow-effect {
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.4);
+}
+
+:root.lang-es .glow-effect:hover {
+  box-shadow: 0 0 25px rgba(220, 20, 60, 0.6);
+}
+
+/* Background animado para Portugal */
+:root.lang-pt .animated-gradient {
+  background: linear-gradient(-45deg, #0f172a, #172554, #1e3a8a, #1e40af);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Background animado para Espanha - Cores pastel */
+:root.lang-es .animated-gradient {
+  background: linear-gradient(-45deg, #1a0a0a, #2d1414, #4a2020, #6b3030);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Text glow para Portugal */
+:root.lang-pt .text-glow {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+}
+
+/* Text glow para Espanha */
+:root.lang-es .text-glow {
+  text-shadow: 0 0 10px rgba(220, 20, 60, 0.7);
+}
+
+/* Grid background para Portugal */
+:root.lang-pt .bg-gradient-mesh {
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+}
+
+/* Grid background para Espanha */
+:root.lang-es .bg-gradient-mesh {
+  background-image: linear-gradient(to right, rgba(220, 20, 60, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(220, 20, 60, 0.1) 1px, transparent 1px);
+}
+
+/* Card Gradients para Espanha - Degradê cinza para amarelo pastel claro */
+:root.lang-es .card-gradient-es {
+  background: linear-gradient(135deg, rgba(100, 100, 100, 0.1) 0%, rgba(255, 240, 180, 0.15) 100%);
+  color: #1a1a1a;
+}
+
+/* Skill Cards com degradê para Espanha */
+:root.lang-es .skill-card-es {
+  background: linear-gradient(135deg, rgba(120, 120, 120, 0.08) 0%, rgba(255, 245, 200, 0.12) 100%);
+  border: 1px solid rgba(255, 235, 180, 0.25);
+  color: #1a1a1a;
+}
+
+:root.lang-es .skill-card-es h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+:root.lang-es .skill-card-es p {
+  color: #1a1a1a;
+}
+
+/* About Cards com degradê para Espanha */
+:root.lang-es .about-card-es {
+  background: linear-gradient(135deg, rgba(80, 80, 80, 0.12) 0%, rgba(255, 245, 210, 0.2) 100%);
+  border: 1px solid rgba(220, 20, 60, 0.12);
+  color: #1a1a1a;
+}
+
+:root.lang-es .about-card-es h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+:root.lang-es .about-card-es p {
+  color: #1a1a1a;
+}
+
+/* Project Cards com degradê para Espanha */
+:root.lang-es .project-card-es {
+  background: linear-gradient(135deg, rgba(100, 100, 100, 0.08) 0%, rgba(255, 240, 190, 0.15) 100%);
+  border: 1px solid rgba(255, 235, 180, 0.2);
+  color: #1a1a1a;
+}
+
+:root.lang-es .project-card-es h3 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Global heading styles for Spanish cards */
+:root.lang-es .card h3,
+:root.lang-es .card h4 {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+:root.lang-es [class*="card"] h3,
+:root.lang-es [class*="card"] h4 {
+  color: #ffffff;
+  font-weight: 700;
+}
