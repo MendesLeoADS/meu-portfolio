@@ -9,7 +9,7 @@ import { ExternalLink, FolderGit2, Github } from "lucide-react"
 import { useState } from "react"
 
 // Este componente permitirá que o Leonardo adicione seus projetos depois
-const projectCategories = ["Todos", "Web", "Apps", "Automação"]
+const projectCategories = ["Todos", "Web", "Apps", "Automação", "Dashboard"]
 
 // Projetos placeholder que podem ser substituídos com projetos reais
 const projectsData = [
@@ -23,38 +23,38 @@ const projectsData = [
     live: "https://drive.google.com/file/d/199y2vmhkYo7WMaln69AZxrprFyciv8Vu/view?usp=sharing",
     category: "Apps",
   },
-  // {
-  //   id: 2,
-  //   title: "Automação de Relatórios Fiscais",
-  //   description:
-  //     "Sistema de automação para geração de relatórios fiscais usando Google Apps Script e integração com APIs.",
-  //   image: "/placeholder.svg?height=300&width=500",
-  //   technologies: ["Google Apps Script", "REST APIs", "JavaScript"],
-  //   github: "https://github.com/MendesLeoADS/projeto2",
-  //   live: "#",
-  //   category: "Automação",
-  // },
-  // {
-  //   id: 3,
-  //   title: "Aplicativo de Gestão de Tarefas",
-  //   description:
-  //     "App para gestão de tarefas desenvolvido com App Sheet, com notificações e sincronização com Google Calendar.",
-  //   image: "/placeholder.svg?height=300&width=500",
-  //   technologies: ["App Sheet", "Google Workspace", "REST APIs"],
-  //   github: "#",
-  //   live: "#",
-  //   category: "Apps",
-  // },
-  // {
-  //   id: 4,
-  //   title: "Dashboard de Indicadores",
-  //   description: "Dashboard interativo para visualização de métricas e KPIs de negócio.",
-  //   image: "/placeholder.svg?height=300&width=500",
-  //   technologies: ["JavaScript", "Chart.js", "HTML/CSS"],
-  //   github: "https://github.com/MendesLeoADS/projeto4",
-  //   live: "#",
-  //   category: "Web",
-  // },
+  {
+    id: 2,
+    title: "Site Institucional Academia Artes Marciais",
+    description:
+      "Site Institucional da Academia Artes Marciais Black Lotus Vila Formosa, focado em atrair novos alunos e fornecer informações sobre os serviços oferecidos pela academia. Sou o responsável pelo desenvolvimento, manutenção e hospedagem do site, garantindo que ele esteja sempre atualizado e funcionando corretamente para atender às necessidades da academia e de seus clientes.",
+    image: "imgProjects/siteBlackLotus.png",
+    technologies: [ "JavaScript", "Vercel", "WhatsApp" ],
+    github: "https://github.com/MendesLeoADS/siteBlackLotusVilaFormosaV2",
+    live: "https://www.blacklotusvilaformosa.com.br/",
+    category: "Web",
+  },
+  {
+    id: 3,
+    title: "Centenas de Automações para diferentes Cases",
+    description:
+      "Já atuei no desenvolvimento de centenas de automações como Business Partner de Empresas do Varejo, grandes Indústrias, Atacado, enfim. Em áreas: Contábil, Fiscal, Financeira, FP&A, Segurança de Frotas, entre outras. Lhe convido a uma conversa, para eu explanar melhor esses projetos, uma vez que sob contrato, não podem ser expostos.",
+    image: "imgProjects/automacoes.png",
+    technologies: ["App Sheet", "Google Workspace", "REST APIs"],
+    github: "#",
+    live: "#",
+    category: "Automação",
+  },
+  {
+    id: 4,
+    title: "BI e Análise de Dados",
+    description: "Atuei no desenvolvimento de Dashboards, utilizando Power BI/ Qlik Sense, para análise de indicadores de vendas e desempenho, DRE´s, Apurações Fiscais, pagamentos, gestão de frotas, em grandes empresas de varejo, indústria de Latícinios, Tempero e Automobilística, entre outros. Lhe convido a uma conversa, para eu explanar melhor esses projetos, uma vez que sob contrato, não podem ser expostos.",
+    image: "imgProjects/bi_dados.png",
+    technologies: ["Power BI", "Tableau", "Qlik", "SQL", "Excel"],
+    github: "#",
+    live: "#",
+    category: "Dashboard",
+  },
 ]
 
 export default function Projects() {
